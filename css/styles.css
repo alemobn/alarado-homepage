@@ -7,10 +7,14 @@
 }
 
 :root {
-    --container: 0px 230px;
+    --lg-screen-container: 0px 230px;
+    --md-screen-container: 0px 50px;
+    --sm-screen-container: 0px 10px;
     --blue-color: #2A4DD0;
     --green-color: #4CA154;
     --btn-switcher: #223344;
+
+    --ham-color: #223344;
 
     --white-color: #FFFFFF;
     --light-grey-color: #909193;
@@ -28,6 +32,7 @@
     --light-grey-color: #909193;
     --main-font-color: #F2F9FE;
     --theme-background-color: #111729;
+    --ham-color: #F2F9FE;
 
     --sun-img: url('../assets/Sun_fill_light.svg');
     --moon-img: url('../assets/Moon_fill.svg');
@@ -38,7 +43,7 @@ html {
 }
 
 body {
-    margin: var(--container);
+    margin: var(--lg-screen-container);
     background-color: var(--theme-background-color);
 }
 
@@ -85,9 +90,22 @@ body {
 }
 
 .navbar .logo-text {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
     color: var(--main-font-color);
+}
+
+.navbar .ham {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar .ham div {
+    width: 32px;
+    height: 3px;
+    background-color: var(--ham-color);
+    margin: 8px;
+    transition: 0.2s ease;
 }
 
 .navbar .menu {
@@ -156,6 +174,7 @@ body {
 .about .content h1 {
     font-size: 60px;
     color: var(--main-font-color);
+    margin-top: 8px;
     margin-bottom: 25px;
 }
 
@@ -188,16 +207,21 @@ body {
     text-decoration: underline;
 }
 
-.about .content .checkbox {
+.about .content .checks {
     display: flex;
     align-items: center;
     font-size: 12px;
     color: var(--light-grey-color);
     font-weight: 400;
     margin-top: 35px;
+    margin-bottom: 70px;
 }
 
-.about .content .checkbox label {
+.about .content .checks img {
+    margin: 0px;
+}
+
+.about .content .checks p {
     margin: 0px 20px 0px 5px;
 }
 
@@ -207,5 +231,5 @@ body {
 }
 
 .about-img img {
-    width: 100%;
+    width: 500px;
 }

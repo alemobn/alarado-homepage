@@ -1,4 +1,18 @@
 const btnSwitcher = document.querySelector('.btn-switcher');
+const ham = document.querySelector('.ham');
+
+(function () {
+    const menu = document.querySelector('.menu');
+
+    if (window.innerWidth <= 640) {
+        menu.appendChild(btnSwitcher);
+    }
+})();
+
+ham.addEventListener('click', function () {
+    showMenu();
+    toggleHam();
+})
 
 btnSwitcher.addEventListener('click', function () {
     toggleActive();
@@ -19,3 +33,14 @@ function toggleTheme() {
     const html = document.querySelector('html');
     html.classList.toggle('dark-mode');
 }
+
+function showMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
+
+function toggleHam() {
+    const ham = document.querySelector('.ham');
+    ham.classList.toggle('active');
+}
+

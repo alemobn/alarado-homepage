@@ -1,0 +1,81 @@
+@media (max-width: 1024px) {
+    body {
+        margin: var(--md-screen-container) !important;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about img {
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        margin: var(--sm-screen-container) !important;
+        overflow-x: hidden;
+    }
+
+    .navbar .ham {
+        display: block !important;
+        z-index: 1 !important;
+        background-color: transparent;
+    }
+
+    .navbar .menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 65vw;
+        height: 100vh;
+        background-color: var(--theme-background-color);
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center;
+        font-size: 22px !important;
+        transform: translateX(100%);
+        transition: 0.2s ease;
+    }
+
+    .navbar .menu.active {
+        transform: translateX(0);
+    }
+
+    .navbar .ham.active .line-1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+
+    .navbar .ham.active .line-2 {
+        opacity: 0;
+    }
+
+    .navbar .ham.active .line-3 {
+        transform: rotate(45deg) translate(-7px, -7px);
+    }
+
+    .navbar .menu .menu-item {
+        text-align: center;
+    }
+
+    .navbar .btn-switcher {
+        display: none !important;
+    }
+
+    .navbar .menu .btn-switcher {
+        display: flex !important;
+    }
+
+    .about .content h1 {
+        font-size: 32px !important;
+    }
+
+    .about .content .checks p {
+        font-size: 12px !important;
+    }
+
+    .about-img img {
+        width: 300px !important;
+    }
+}
