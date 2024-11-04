@@ -7,13 +7,205 @@
 }
 
 :root {
+    --container: 0px 230px;
     --blue-color: #2A4DD0;
     --green-color: #4CA154;
+    --btn-switcher: #223344;
+
     --white-color: #FFFFFF;
     --light-grey-color: #909193;
-    --dark-grey-color: #223344;
-    --light-theme-background-color: #F2F9FE;
-    --dark-theme-background-color: #111729;
+    --main-font-color: #223344;
+    --theme-background-color: #F2F9FE;
+
+    --sun-img: url('../assets/Sun_fill.svg');
+    --moon-img: url('../assets/Moon_fill_light.svg');
+
+    --about-img: url('../assets/hero-image-simple-homepage.png');
 }
 
+.dark-mode:root {
+    --white-color: #FFFFFF;
+    --light-grey-color: #909193;
+    --main-font-color: #F2F9FE;
+    --theme-background-color: #111729;
 
+    --sun-img: url('../assets/Sun_fill_light.svg');
+    --moon-img: url('../assets/Moon_fill.svg');
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: var(--container);
+    background-color: var(--theme-background-color);
+}
+
+.active {
+    background-color: var(--white-color);
+    transition: .3s ease;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 25px 0px;
+}
+
+.navbar .logo {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 14px;
+}
+
+.navbar .logo:hover {
+    cursor: pointer;
+}
+
+.navbar .logo .blue {
+    height: 15px;
+    width: 15px;
+    background-color: var(--blue-color);
+    transform: rotate(45deg);
+    z-index: 2;
+    position: absolute;
+    left: -8px;
+}
+
+.navbar .logo .green {
+    height: 15px;
+    width: 15px;
+    background-color: var(--green-color);
+    transform: rotate(45deg);
+}
+
+.navbar .logo-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--main-font-color);
+}
+
+.navbar .menu {
+    display: flex;
+    align-items: end;
+    list-style: none;
+    gap: 40px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.navbar .menu .menu-item .menu-item-link {
+    text-decoration: none;
+    color: var(--light-grey-color);
+}
+
+.navbar .menu .menu-item .menu-item-link .selected {
+    color: var(--main-font-color);
+}
+
+.navbar .btn-switcher {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--btn-switcher);
+    border: none;
+    height: 22px;
+    width: 42px;
+}
+
+.navbar .btn-switcher:hover {
+    cursor: pointer;
+}
+
+.navbar .btn-switcher .moon,
+.navbar .btn-switcher .sun {
+    background-size: contain;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+}
+
+.navbar .btn-switcher .moon {
+    background-image: var(--moon-img);
+}
+
+.navbar .btn-switcher .sun {
+    background-image: var(--sun-img);
+}
+
+/* main content */
+.about {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.about .content span {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--main-font-color);
+}
+
+.about .content h1 {
+    font-size: 60px;
+    color: var(--main-font-color);
+    margin-bottom: 25px;
+}
+
+.about .content p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--light-grey-color);
+    margin-bottom: 22px;
+}
+
+.about .content .btn .get-started {
+    padding: 13px 28px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+}
+
+.about .content .btn .get-live-demo {
+    padding: 13px 28px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--blue-color);
+    text-decoration: underline;
+}
+
+.about .content .checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: var(--light-grey-color);
+    font-weight: 400;
+    margin-top: 35px;
+}
+
+.about .content .checkbox label {
+    margin: 0px 20px 0px 5px;
+}
+
+.about-img {
+    display: flex;
+    justify-content: center;
+}
+
+.about-img img {
+    width: 100%;
+}
