@@ -11,7 +11,7 @@
     - Flexbox
 - JavaScript
 
-## About & Features:
+## About & Features
 
 - Frontend
 - Responsive
