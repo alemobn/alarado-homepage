@@ -9,9 +9,10 @@
 - HTML5
 - CSS3
     - Flexbox
-    - Responsive
 - JavaScript
 
 ## About & Features:
-* Frontend
-* [Challenge (*devchallenges.io*)](https://devchallenges.io/challenge/simple-hompage-alarado)
+
+- Frontend
+- Responsive
+- [Challenge (*devchallenges.io*)](https://devchallenges.io/challenge/simple-hompage-alarado)
